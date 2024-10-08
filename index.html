@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studygram - Notes Upload & Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Studygram</h1>
+            <p>Upload and Download Study Notes</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#upload-section">Upload</a></li>
+                <li><a href="#download-section">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="search-section">
+        <input type="text" id="search-bar" placeholder="Search notes...">
+    </section>
+
+    <section id="upload-section">
+        <h2>Upload Your Study Notes (PDF)</h2>
+        <form id="upload-form">
+            <input type="file" id="file-input" accept="application/pdf">
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+    <section id="download-section">
+        <h2>Available Notes</h2>
+        <div id="notes-list">
+            <!-- Dynamically add notes here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>Made by Xolo999 | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
