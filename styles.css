@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#search-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#search-bar {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+#upload-section, #download-section {
+    padding: 40px;
+    text-align: center;
+}
+
+#upload-section h2, #download-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#upload-form input, #upload-form button {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+#upload-form button {
+    background-color: #282c34;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#upload-form button:hover {
+    background-color: #555;
+}
+
+#notes-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#notes-list div {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+}
+
+footer {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
