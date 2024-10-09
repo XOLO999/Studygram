@@ -26,3 +26,20 @@ document.getElementById("search-bar").addEventListener("input", function () {
         note.style.display = title.includes(query) ? "block" : "none";
     });
 });
+function filterNotes() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const filter = document.getElementById('filterOptions').value;
+    const notes = document.querySelectorAll('.note-item');
+
+    notes.forEach(note => {
+        const text = note.textContent.toLowerCase();
+        const matchesSearch = text.includes(input);
+        const matchesFilter = filter === "all" || text.includes(filter);
+
+        if (matchesSearch && matchesFilter) {
+            note.style.display = '';
+        } else {
+            note.style.display = 'none';
+        }
+    });
+}
