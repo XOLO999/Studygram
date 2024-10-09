@@ -63,3 +63,38 @@
     </header>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studygram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="logo-container">
+        <div class="logo">
+            <span class="logo-icon">📖</span> <!-- Replace with your icon or image -->
+            <h1 class="logo-text">Studygram</h1>
+        </div>
+    </header>
+
+    <!-- Three Dot Button -->
+    <div class="three-dot-container">
+        <div class="three-dot-button" onclick="toggleMenu()">⋮</div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#">Upload</a>
+            <a href="#">Settings</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+    </html>
