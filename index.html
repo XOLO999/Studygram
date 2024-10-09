@@ -154,3 +154,92 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studygram</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body id="body">
+    <header class="logo-container">
+        <div class="logo" id="logo">
+            <span class="logo-icon">📖</span> 
+            <h1 class="logo-text">Studygram</h1>
+        </div>
+    </header>
+
+    <div class="chart-container">
+        <canvas id="studyProgressChart"></canvas>
+    </div>
+
+    <!-- Existing code ... -->
+
+    <script>
+        // Sample data for the chart
+        const ctx = document.getElementById('studyProgressChart').getContext('2d');
+        const studyProgressChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Study Hours',
+                    data: [5, 10, 7, 12], // Replace with real data
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Study Progress Over Time'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+<div class="activity-feed">
+    <h2>Recent Activity</h2>
+    <ul id="activityList">
+        <li>User A uploaded a new note: "Math Basics"</li>
+        <li>User B commented on "Science Project"</li>
+        <li>User C downloaded "History PDF"</li>
+    </ul>
+</div>
+<div class="dashboard">
+    <h2>Your Dashboard</h2>
+    <div class="dashboard-info">
+        <p>Recently Viewed Notes:</p>
+        <ul>
+            <li>"Physics Chapter 1"</li>
+            <li>"Biology Cell Structure"</li>
+            <li>"Chemistry Solutions"</li>
+        </ul>
+    </div>
+</div>
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search notes..." onkeyup="filterNotes()">
+    <select id="filterOptions">
+        <option value="all">All</option>
+        <option value="pdf">PDFs</option>
+        <option value="notes">Notes</option>
+        <option value="photos">Photos</option>
+    </select>
+</div>
+
+<ul id="notesList">
+    <li class="note-item">Physics Chapter 1 (PDF)</li>
+    <li class="note-item">Biology Cell Structure (Note)</li>
+    <li class="note-item">Chemistry Solutions (PDF)</li>
+    <li class="note-item">Mathematics Basics (Note)</li>
+</ul>
